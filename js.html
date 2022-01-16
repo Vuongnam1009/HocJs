@@ -1,0 +1,30 @@
+
+<script>
+    function findAMonsterByAttack(monsters) {
+    var monster = monsters.find(function(monster){
+        return monster.attack === 150
+    })
+    if(monster){
+    delete monster.speed
+    delete monster.hitpoint}else{
+        monster = null
+    }
+    console.log(monster)
+    return monster
+}
+findAMonsterByAttack([
+    {
+        name: 'Cá heo',
+        attack: 50,
+        speed: 100,
+        hitpoint: 100,
+    },
+    {
+        name: 'Khủng long',
+        attack: 150,
+        speed: 80,
+        hitpoint: 180,
+    },
+
+])
+</script>
