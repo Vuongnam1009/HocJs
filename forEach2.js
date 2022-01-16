@@ -1,11 +1,14 @@
 Array.prototype.forEach2 = function(callback){
-    let i = 0
-    for(;i< this.length;i++){
-     result = callback(this[i],i)
+  for(var index in this){
+    if(this.hasOwnProperty(index)){
+      callback(this[index],index,this)
     }
-    return result
   }
-  var a = [1,2,3,4]
-  a.forEach2(function(b){
-    console.log(b)
-  })
+}
+
+
+// Eg.
+var a = [1,2,3,4]
+a.forEach2(function(b,c,a){
+  console.log(b,c,a)
+})
