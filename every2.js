@@ -2,10 +2,12 @@ Array.prototype.every2 = function(callback){
   let result = true
  for(var index in this){
    if(this.hasOwnProperty(index)){
-  var test = callback(this[index],index)}
+  var test = callback(this[index],index)
    if(!test){
      result = false
+     break
    }
+  }
  }
  return result
 }

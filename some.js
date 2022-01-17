@@ -5,6 +5,7 @@ Array.prototype.some2 = function(callback){
      var test = callback(this[index],index)
       if(!!test){
         result = true
+        break
    }
    }
  }
